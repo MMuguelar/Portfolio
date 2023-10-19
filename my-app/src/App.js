@@ -6,10 +6,11 @@ import Favoritos from './pages/favoritos';
 import Home from './pages/home';
 import Info from './pages/infoNuestra';
 import Layout from './pages/layout';
-
+import CreacionesProvider from './context/CreacionesContext';
 function App() {
   return (
     <>
+    <CreacionesProvider>
     <BrowserRouter>
        <Routes>
           <Route path="/" element={<Layout />}>
@@ -21,7 +22,7 @@ function App() {
 
        </Routes>
      </BrowserRouter>
-    
+     </CreacionesProvider>
     </>
   );
 }
