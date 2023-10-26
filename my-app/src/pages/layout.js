@@ -6,6 +6,7 @@ export default function Layout() {
     <>
       <header>
         {" "}
+      
         <a href="" class="text-decoration-none d-block d-lg-none">
           <h1 class="m-0 display-5 font-weight-semi-bold">
             <span class="text-primary font-weight-bold border px-3 mr-1">
@@ -24,20 +25,21 @@ export default function Layout() {
             <Link to="/" class="nav-item nav-link active">
               Home
             </Link>
-            <Link to="/productos" class="nav-item nav-link">
-              productos
+            <Link to="/creaciones" class="nav-item nav-link">
+              Creaciones
             </Link>
-            <Link to="/contacto" class="nav-item nav-link">
-              contacto
+            <Link to="/favoritos" class="nav-item nav-link">
+              favoritos
             </Link>
-            <Link to="/carrito" class="nav-item nav-link">
-              carrito
+            <Link to="/info" class="nav-item nav-link">
+              info nuestra
             </Link>
           </div>
         </div>
       </nav>
       <Outlet />
       <footer>
+      
         <Contacto />
       </footer>
 
