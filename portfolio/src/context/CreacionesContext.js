@@ -4,12 +4,14 @@ import axios from "axios";
 
 export const CreacionesContext = createContext();
 const CreacionesProvider = (props) => {
+  const KEY_FAV="favoritos";
+  let objeto= localStorage.getItem(KEY_FAV) ? JSON.parse(localStorage.getItem(KEY_FAV)) : [];
   const [creacion, setCreacion] = useState({});
   const [creaciones, setCreaciones] = useState([]);
-  const [favoritos, setFavoritos] = useState([]);
+  const [favoritos, setFavoritos] = useState(objeto);
   const [destacados, setDestacados] = useState([]);
 
-  const KEY_FAV="favoritos";
+  
   const getCreaciones = async () => {
     await axios
       .get("Creaciones.json")
@@ -39,7 +41,16 @@ const CreacionesProvider = (props) => {
   };
   
   const AgregarFavoritos = async (creacion) => {
-    setFavoritos([...favoritos, creacion]);
+    //hacer que si la creacion ya esta en favoritos que no lo agregue
+    favoritos.map((favs)=>{
+      if (favs==creacion) {
+        console.log("le estas agregando un favorito que ya esta agregado");
+      }
+      else{
+        setFavoritos([...favoritos, creacion]);
+      }
+    });
+    
   };
   
 
