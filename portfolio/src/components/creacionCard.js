@@ -3,6 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 
 export default function CreacionCard({creacion}) {
   console.log("entre a CreacionCard y me llega esto,", creacion);
+ 
   const {id, titulo, descripcion, imagen, fecha, url } = creacion;
     return(
 <>
@@ -38,7 +39,7 @@ export default function CreacionCard({creacion}) {
     
       <input type="hidden" name="IdPersonaje" value="@Pj.IdPersonaje"/>
       <button class="CardButtom"  href= {url}  value="@Pj.IdPersonaje">link</button>
-      <Link to={`/DetalleCreacion/${creacion}`}> <button class="CardButtom" >DetalleCreacion</button></Link>
+      <Link to={`/detalleCreacion/${id}`}> <button class="CardButtom" >DetalleCreacion</button></Link>
     
       
 

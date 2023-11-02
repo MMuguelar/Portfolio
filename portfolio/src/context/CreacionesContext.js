@@ -7,8 +7,9 @@ const CreacionesProvider = (props) => {
   const [creacion, setCreacion] = useState({});
   const [creaciones, setCreaciones] = useState([]);
   const [favoritos, setFavoritos] = useState([]);
-  const [destacados, setDestacados] = useState([])
+  const [destacados, setDestacados] = useState([]);
 
+  const KEY_FAV="favoritos";
   const getCreaciones = async () => {
     await axios
       .get("Creaciones.json")
@@ -23,18 +24,10 @@ const CreacionesProvider = (props) => {
       });
   };
   const getCreacionById = async (id) => {
-    await axios
-      .get("Creaciones.json")
-      .then((result) => {
-        let creacionesAux= result.data.creaciones;
-        const creacionAux =creacionesAux.filter((cre)=>cre.id==id)
-        setCreacion(creacionAux);
-        
-
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  
+        let creacionesAux= creaciones;
+        let creacionAux =creacionesAux.filter((cre)=>cre.id==id);
+        setCreacion(creacionAux[0]);
   };
 
   const getDestacados = async () => {
@@ -45,6 +38,10 @@ const CreacionesProvider = (props) => {
 
   };
   
+  const AgregarFavoritos = async (creacion) => {
+    setFavoritos([...favoritos, creacion]);
+  };
+  
 
 
   useEffect(() => {
@@ -53,7 +50,14 @@ const CreacionesProvider = (props) => {
     getDestacados();
     
 }, []);
+useEffect(()=>{
+  guardarObjeto(favoritos, KEY_FAV); //en teoría esto debería pisar lo que había con la key antes y guardar el nuevo con el producto eliminado
+},[favoritos])
 
+const guardarObjeto = (objeto, key) => {
+  let jsonProductos = JSON.stringify(objeto);
+  localStorage.setItem(key, jsonProductos); 
+}
   return (
     <>
       <CreacionesContext.Provider
@@ -61,11 +65,11 @@ const CreacionesProvider = (props) => {
           creaciones,
           getCreaciones,
           favoritos,
-          setFavoritos,
           destacados,
           getDestacados,
           creacion,
-          getCreacionById
+          getCreacionById,
+          AgregarFavoritos,
          
         }}
       >

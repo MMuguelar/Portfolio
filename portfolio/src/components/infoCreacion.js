@@ -1,6 +1,7 @@
 import react, { createContext, useContext } from 'react';
 import { CreacionesContext } from '../context/CreacionesContext';
 import { Link, Outlet, useNavigate  } from "react-router-dom";
+
 export default function InfoCreacion({creacion}) {
    {/* const navigate = useNavigate ();
     console.log ("producto: ",producto);
@@ -11,6 +12,15 @@ export default function InfoCreacion({creacion}) {
         navigate("/carrito");
     }  */}
     const { id, titulo, descripcion, imagen, fecha, url } = creacion || {};
+    console.log(creacion, "la creacion de infoCreacion");
+    const {AgregarFavoritos} = useContext(CreacionesContext);    
+    const handleOnClick = async ()=>{
+      //que lo mande a la url
+    }  
+    const agregarFav = async ()=>{
+        AgregarFavoritos(creacion);
+      }  
+
     return(
 <>
 
@@ -44,25 +54,14 @@ export default function InfoCreacion({creacion}) {
                     </div>
                     <small class="pt-1">(500.000 Reviews)</small>
                 </div>
-                <h3 class="font-weight-semi-bold mb-4">${fecha}</h3>
+                <h3 class="font-weight-semi-bold mb-4">{fecha}</h3>
                 <p class="mb-4">{descripcion}</p>
                 <div class="d-flex mb-3">
                     
                 <div class="d-flex align-items-center mb-4 pt-2">
-                    <div class="input-group quantity mr-3 style5" >
-                        <div class="input-group-btn">
-                            <button class="btn btn-primary btn-minus" >
-                            <i class="fa fa-minus"></i>
-                            </button>
-                        </div>
-                        <input type="text" class="form-control bg-secondary text-center" value="1"/>
-                        <div class="input-group-btn">
-                            <button class="btn btn-primary btn-plus">
-                                <i class="fa fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
+                    
                     <button class="btn btn-primary px-3" onClick={handleOnClick}><i class="fa fa-shopping-cart mr-1"></i> Ver url</button> 
+                    <button class="btn btn-primary px-3" onClick={agregarFav}><i class="fa fa-shopping-cart mr-1"></i>  Agregar a favoritos</button> 
                 </div>
                 <div class="d-flex pt-2">
                     <p class="text-dark font-weight-medium mb-0 mr-2">Share on:</p>
