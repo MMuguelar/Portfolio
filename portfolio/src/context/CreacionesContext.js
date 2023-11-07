@@ -42,16 +42,29 @@ const CreacionesProvider = (props) => {
   
   const AgregarFavoritos = async (creacion) => {
     //hacer que si la creacion ya esta en favoritos que no lo agregue
+    let incluir=true;
     favoritos.map((favs)=>{
       if (favs==creacion) {
         console.log("le estas agregando un favorito que ya esta agregado");
+        incluir=false
       }
-      else{
-        setFavoritos([...favoritos, creacion]);
-      }
+        
     });
+    if (incluir==true) {
+      setFavoritos([...favoritos, creacion]);      
+    }
     
   };
+  
+  const EliminarDeFavoritos = async (creacion) => {
+      let favoritosAux=favoritos;
+      favoritosAux= favoritosAux.filter((favo)=> favo.id !== creacion.id);
+      setFavoritos(favoritosAux);      
+    
+    
+  };
+
+
   
 
 
@@ -81,7 +94,7 @@ const guardarObjeto = (objeto, key) => {
           creacion,
           getCreacionById,
           AgregarFavoritos,
-         
+          EliminarDeFavoritos,         
         }}
       >
         {props.children}

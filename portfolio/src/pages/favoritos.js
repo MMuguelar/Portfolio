@@ -5,7 +5,8 @@ import CreacionCard from '../components/creacionCard';
 
 export default function Favoritos() {
     const {favoritos} = useContext(CreacionesContext);
-
+    console.log("los favoritos en la page Favoritos");
+    console.log(Favoritos);
     return(
 <>
     {
