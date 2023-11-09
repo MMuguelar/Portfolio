@@ -5,10 +5,13 @@ import axios from "axios";
 export const CreacionesContext = createContext();
 const CreacionesProvider = (props) => {
   const KEY_FAV="favoritos";
+  const KEY_CONT="contador";
   let objeto= localStorage.getItem(KEY_FAV) ? JSON.parse(localStorage.getItem(KEY_FAV)) : [];
+  let contadorr= localStorage.getItem(KEY_CONT) ? JSON.parse(localStorage.getItem(KEY_CONT)) : 0;
   const [creacion, setCreacion] = useState({});
   const [creaciones, setCreaciones] = useState([]);
   const [favoritos, setFavoritos] = useState(objeto);
+  const [contFavoritos, setContFavoritos] =useState(contadorr);
   const [destacados, setDestacados] = useState([]);
 
   
@@ -51,7 +54,8 @@ const CreacionesProvider = (props) => {
         
     });
     if (incluir==true) {
-      setFavoritos([...favoritos, creacion]);      
+      setFavoritos([...favoritos, creacion]);
+      setContFavoritos(contFavoritos+1);      
     }
     
   };
@@ -59,7 +63,8 @@ const CreacionesProvider = (props) => {
   const EliminarDeFavoritos = async (creacion) => {
       let favoritosAux=favoritos;
       favoritosAux= favoritosAux.filter((favo)=> favo.id !== creacion.id);
-      setFavoritos(favoritosAux);      
+      setFavoritos(favoritosAux);  
+      setContFavoritos(contFavoritos-1);     
     
     
   };
@@ -72,6 +77,7 @@ const CreacionesProvider = (props) => {
     console.log('se va a cargar los productos');
     getCreaciones();
     getDestacados();
+    
     
 }, []);
 useEffect(()=>{
@@ -94,7 +100,8 @@ const guardarObjeto = (objeto, key) => {
           creacion,
           getCreacionById,
           AgregarFavoritos,
-          EliminarDeFavoritos,         
+          EliminarDeFavoritos, 
+                
         }}
       >
         {props.children}

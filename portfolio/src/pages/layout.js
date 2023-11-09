@@ -1,7 +1,11 @@
-import react from "react";
 import { Link, Outlet } from "react-router-dom";
 import Contacto from "../components/contacto.js";
+import react, { useContext, useEffect } from 'react'
+import { CreacionesContext } from "../context/CreacionesContext.js";
+import Badge from '@mui/material/Badge';
 export default function Layout() {
+  const {favoritos} = useContext(CreacionesContext);
+  const favoritosAux=favoritos;
   return (
     <>
       <header>
@@ -28,9 +32,11 @@ export default function Layout() {
             <Link to="/creaciones" class="nav-item nav-link">
               Creaciones
             </Link>
+            <Badge badgeContent={favoritosAux.length}   color="primary">
             <Link to="/favoritos" class="nav-item nav-link">
               favoritos
             </Link>
+            </Badge>
             <Link to="/info" class="nav-item nav-link">
               info nuestra
             </Link>
