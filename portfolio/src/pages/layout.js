@@ -26,20 +26,28 @@ export default function Layout() {
           id="navbarCollapse"
         >
           <div class="navbar-nav mr-auto py-0">
-            <Link to="/" class="nav-item nav-link active">
-              Home
-            </Link>
-            <Link to="/creaciones" class="nav-item nav-link">
-              Creaciones
-            </Link>
+           {/* <Link to="/" class="nav-item nav-link active">Home</Link>
+            <Link to="/creaciones" class="nav-item nav-link">Creaciones</Link>
             <Badge badgeContent={favoritosAux.length}   color="primary">
-            <Link to="/favoritos" class="nav-item nav-link">
-              favoritos
-            </Link>
+            <Link to="/favoritos" class="nav-item nav-link">favoritos</Link>
             </Badge>
-            <Link to="/info" class="nav-item nav-link">
-              info nuestra
-            </Link>
+            <Link to="/info" class="nav-item nav-link">info nuestra</Link>*/}
+            <ul class="nav">
+                <li class="item">
+                <Link to="/" class="nav-item nav-link active">Home</Link>
+                </li>
+                <li class="item">
+                <Link to="/creaciones" class="nav-item nav-link">Creaciones</Link>
+                </li>
+                <Badge badgeContent={favoritosAux.length}   color="primary">
+                <li class="item">
+                <Link to="/favoritos" class="nav-item nav-link">favoritos</Link>
+                </li>
+                </Badge>
+                <li class="item">
+                <Link to="/info" class="nav-item nav-link">info nuestra</Link>
+                </li>
+            </ul>
           </div>
         </div>
       </nav>

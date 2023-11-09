@@ -9,13 +9,21 @@ export default function Favoritos() {
     console.log(Favoritos);
     return(
 <>
+<section class="section" id="portfolio">
+        <div class="container text-center">
+            <p class="section-subtitle">Tus obras favoritas</p>
+            <h6 class="section-title mb-6">Favoritos</h6>
+            <div class="row">
     {
                 favoritos.map((fav) => (
-                    <div class="col-lg-3 col-md-6 col-sm-12 pb-1 contene2">
+                    
                         <CreacionCard creacion={fav}/>
-                   </div> 
+                   
                 ))
             }
+            </div>
+         </div>
+        </section>
    
 </>
 )

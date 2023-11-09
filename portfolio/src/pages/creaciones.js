@@ -4,17 +4,27 @@ import { CreacionesContext } from '../context/CreacionesContext';
 import CreacionCard from '../components/creacionCard';
 export default function Creaciones() {
 
-    const {creaciones} = useContext(CreacionesContext);
-    return(
-<>
-{
-                creaciones.map((creacion) => (
-                   /* {<div class="col-lg-3 col-md-6 col-sm-12 pb-1">}*/
-                        <CreacionCard creacion={creacion}/>
-                 /*  { </div> }*/
-                ))
-            }
-</>
-)
+    const { creaciones } = useContext(CreacionesContext);
+    return (
+        <>
+            <section class="section" id="portfolio">
+                <div class="container text-center">
+                    <p class="section-subtitle">Todas nuestras obras</p>
+                    <h6 class="section-title mb-6">Creaciones</h6>
+
+
+                    <div class="row">
+                        {
+                            creaciones.map((creacion) => (
+                                /* {<div class="col-lg-3 col-md-6 col-sm-12 pb-1">}*/
+                                <CreacionCard creacion={creacion} />
+                                /*  { </div> }*/
+                            ))
+                        }
+                    </div>
+                </div>
+            </section>
+        </>
+    )
 
 }

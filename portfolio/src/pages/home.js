@@ -4,21 +4,29 @@ import { CreacionesContext } from '../context/CreacionesContext';
 import CreacionCard from '../components/creacionCard';
 export default function Home() {
 
-const {destacados, getDestacados, creaciones} = useContext(CreacionesContext);
-useEffect(() => {
-    getDestacados();
-}, [creaciones]);
+    const { destacados, getDestacados, creaciones } = useContext(CreacionesContext);
+    useEffect(() => {
+        getDestacados();
+    }, [creaciones]);
 
-console.log("estos son los destacados que me", destacados);
+    console.log("estos son los destacados que me", destacados);
     return (
         <>
-            {
-                destacados.map((dest) => (
-                    <div class="col-lg-3 col-md-6 col-sm-12 pb-1 contene2">
-                        <CreacionCard creacion={dest}/>
-                   </div> 
-                ))
-            }
+            <section class="section" id="portfolio">
+                <div class="container text-center">
+                    <p class="section-subtitle">Bienvenido a nuestros destacados</p>
+                    <h6 class="section-title mb-6">Portfolio</h6>
+                    <div class="row">
+                        {
+                            destacados.map((dest) => (
+                               
+                                    <CreacionCard creacion={dest} />
+                                
+                            ))
+                        }
+                    </div>
+                </div>
+            </section>
 
         </>
     )

@@ -85,7 +85,7 @@ export default function InfoCreacion({ creacion }) {
                   <i class="fa fa-shopping-cart mr-1"></i> Ver url
                 </button>
                 {incluir===false ? (
-                <button class="btn btn-primary px-3" onClick={sacarFav}> <i class="fa fa-shopping-cart mr-1"></i>Eliminar De favoritos</button> // cambiarle el color a rojo o algo así
+                <button class="btn btn-danger px-3" onClick={sacarFav}> <i class="fa fa-shopping-cart mr-1"></i>Eliminar De favoritos</button> // cambiarle el color a rojo o algo así
                 ): 
                 <button class="btn btn-primary px-3" onClick={agregarFav}> <i class="fa fa-shopping-cart mr-1"></i>Agregar a favoritos</button>
                 
