@@ -5,10 +5,12 @@ export default function Info() {
 
     return(
 <>
-<br></br>
-<a>Numero:</a>
-<br></br>
-<a>Mail:</a>
+<section class="section" id="portfolio">
+                <div class="container text-center">
+                    <p class="section-subtitle"></p>
+                    <h6 class="section-title mb-6">Info Nuestra</h6>
+            </div>
+        </section>
 </>
 )
 

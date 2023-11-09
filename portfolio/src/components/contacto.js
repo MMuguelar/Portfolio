@@ -58,9 +58,9 @@ export default function Contacto() {
     <div class="container">
         <footer class="footer">       
             <p class="mb-0">Octavio S y Mateo M 2023</p>
-            <p class="mb-0">redes sociales:</p>
-            <p class="mb-0">mail:</p>
-            <p class="mb-0">numero: </p>
+            <p class="mb-0">redes sociales: mateo.con.fotos en instagram</p>
+            <p class="mb-0">mail: soyMateo2005@gmai.com</p>
+            <p class="mb-0">numero: 54 9 11 2331-5554</p>
             {/*<div class="social-links text-right m-auto ml-sm-auto">
                 <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
                 <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
