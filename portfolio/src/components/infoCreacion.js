@@ -38,7 +38,8 @@ export default function InfoCreacion({ creacion }) {
       }
     });
   }, );
-
+    console.log("la imagen que llega a info");
+    console.log(imagen);
   return (
     <>
       {!creacion ? (
@@ -51,22 +52,17 @@ export default function InfoCreacion({ creacion }) {
               class="carousel slide"
               data-ride="carousel"
             >
-              <div class="">
-                <div class="carousel-item active">
-                  <img
-                    class="carousel-inner border "
-                    src={imagen}
-                    alt="imagesdfsdf"
-                    height="300px"
-                    whith="auto"
-                  />
+              <div class=""> {/*si se empieza a superponer con el resto de cosas agregarle la clase alejar */}
+                <div class="carousel-item active ">
+                  <img class="tamanoImg"/*"carousel-inner border"*/ src={imagen}alt="imagesdfsdf" /*height="300px"whith="auto"*//>
+                 
                 </div>
               </div>
             </div>
           </div>
-
+          
           <div class="col-lg-7 pb-5">
-            <h3 class="font-weight-semi-bold">{titulo}</h3>
+            <h1 class="font-weight-semi-bold">{titulo}</h1>
             <div class="d-flex mb-3">
               <div class="text-primary mr-2">
                 <small class="fas fa-star"></small>
@@ -75,7 +71,7 @@ export default function InfoCreacion({ creacion }) {
                 <small class="fas fa-star-half-alt"></small>
                 <small class="far fa-star"></small>
               </div>
-              <small class="pt-1">(500.000 Reviews)</small>
+              <small class="pt-1"></small>
             </div>
             <h3 class="font-weight-semi-bold mb-4">{fecha}</h3>
             <p class="mb-4">{descripcion}</p>
@@ -93,7 +89,7 @@ export default function InfoCreacion({ creacion }) {
                 
               </div>
               <div class="d-flex pt-2">
-                <p class="text-dark font-weight-medium mb-0 mr-2">Share on:</p>
+                
                 <div class="d-inline-flex">
                   <a class="text-dark px-2" href="">
                     <i class="fab fa-facebook-f"></i>
@@ -111,7 +107,9 @@ export default function InfoCreacion({ creacion }) {
               </div>
             </div>
           </div>
+          
         </div>
+        
       )}
     </>
   );

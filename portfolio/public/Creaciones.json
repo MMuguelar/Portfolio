@@ -2,72 +2,72 @@
     "creaciones": [
         {
             "id": 0,
-            "titulo": "titulo1",
-            "descripcion": "esto es un ejemplo",
-            "imagen": "",
+            "titulo": "Crossover Legendario",
+            "descripcion": "Foto de Kuja y Octa para la fiesta de disfraces. Kuja se disfrazo de Terminator y Octa de gaucho.",
+            "imagen": "/img/foto-0.jpeg",
             "fecha": "2023-10-19",
             "url": "www.page.com",
             "destacado":true
         },
         {
             "id": 1,
-            "titulo": "titulo2",
-            "descripcion": "esto es un ejemplo 2.0",
-            "imagen": "",
+            "titulo": "GAH- DAMN",
+            "descripcion": "Foto sacada en la previa de la fiesta de disfraces. Bauti muy fachero, Mateo muy musculoso y Makishi muy manija. Bauti iba de prisionero, Mateo de walter white (aunque no parezca) y Mat5as de TiagoPZK.",
+            "imagen": "/img/foto-1.jpeg",
             "fecha": "2023-10-19",
             "url": "www.page.com",
             "destacado":true
         },
         {
             "id": 2,
-            "titulo": "titulo3",
-            "descripcion": "esto es otro ejemplo",
-            "imagen": "",
+            "titulo": "GAH-DAMN???2",
+            "descripcion": "Foto sacada en la previa de la fiesta de disfraces. Menos aesthetic que su otra version pero un poco más graciosa. Bauti iba de prisionero, Mateo de walter white (aunque no parezca), Mat5as de TiagoPZK y guido de Iron-Man.",
+            "imagen": "/img/foto-2.jpeg",
             "fecha": "2023-10-20",
             "url": "www.anotherpage.com",
             "destacado":true
         },
         {
             "id": 3,
-            "titulo": "titulo4",
-            "descripcion": "nuevo ejemplo",
-            "imagen": "",
+            "titulo": "Foto Chill",
+            "descripcion": "Selfie de Octa y Makishi en la estudiantil. Tranqui.",
+            "imagen": "/img/foto-3.jpeg",
             "fecha": "2023-10-20",
             "url": "www.yetanotherpage.com",
-            "destacado":true
+            "destacado":false
         },
         {
             "id": 4,
-            "titulo": "titulo5",
-            "descripcion": "ejemplo número 5",
-            "imagen": "",
+            "titulo": "Cansados",
+            "descripcion": "Foto del ultimo día esperando que llegue el ascensor para salir a la calle. Modelos: Mat5as, Guido y Nacho. Fotografo: Octa.",
+            "imagen": "/img/foto-4.jpeg",
             "fecha": "2023-10-21",
             "url": "www.fifthpage.com",
             "destacado":true
         },
         {
             "id": 5,
-            "titulo": "titulo6",
-            "descripcion": "otro ejemplo más",
-            "imagen": "",
+            "titulo": "Sapito",
+            "descripcion": "Foto de como fue Guido disfrazado a la fiesta animal. Era un sapo pero si le dabas un beso se convertía en un principe. ",
+            "imagen": "/img/foto-5.jpeg",
             "fecha": "2023-10-21",
             "url": "www.sixthpage.com",
             "destacado":true
         },
         {
             "id": 6,
-            "titulo": "titulo7",
-            "descripcion": "séptimo ejemplo",
-            "imagen": "",
+            "titulo": "Random",
+            "descripcion": "foto rara de los pibes en cuero",
+            "imagen": "/img/foto-6.jpeg",
             "fecha": "2023-10-22",
             "url": "www.seventhpage.com",
-            "destacado":false
+            "destacado":true
         },
         {
             "id": 7,
             "titulo": "titulo8",
-            "descripcion": "octavo ejemplo",
-            "imagen": "",
+            "descripcion": "",
+            "imagen": "folio-1.jpg",
             "fecha": "2023-10-22",
             "url": "www.eighthpage.com",
             "destacado":false
@@ -75,8 +75,8 @@
         {
             "id": 8,
             "titulo": "titulo9",
-            "descripcion": "noveno ejemplo",
-            "imagen": "",
+            "descripcion": "",
+            "imagen": "folio-1.jpg",
             "fecha": "2023-10-23",
             "url": "www.ninthpage.com",
             "destacado":false
@@ -84,8 +84,8 @@
         {
             "id": 9,
             "titulo": "titulo10",
-            "descripcion": "décimo ejemplo",
-            "imagen": "",
+            "descripcion": "",
+            "imagen": "folio-1.jpg",
             "fecha": "2023-10-23",
             "url": "www.tenthpage.com",
             "destacado":false

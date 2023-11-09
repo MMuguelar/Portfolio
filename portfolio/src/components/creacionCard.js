@@ -23,25 +23,25 @@ export default function CreacionCard({ creacion }) {
     <a href="#" class="card-link">Another link</a>
   </div>
     </div>*/}
-      
 
 
 
-      
-                        <div class="col-md-4">
-                            <a href="" class="portfolio-card">
-                                <img src="folio-1.jpg" class="portfolio-card-img " alt="imagen"  />
-                                <span class="portfolio-card-overlay">
-                                    <span class="portfolio-card-caption">
-                                        <h4>{titulo}</h4>
-                                        <p class="font-weight-normal">fecha creacion: {fecha}</p>
-                                        <button class="btn btn-primary btn-sm" href={url} value="@Pj.IdPersonaje">link</button>
-                                        <Link to={`/detalleCreacion/${id}`}> <button class="btn btn-primary btn-sm" >DetalleCreacion</button></Link>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-                    
+
+
+      <div class="col-md-4">
+        <a href="" class="portfolio-card">
+          <img src={imagen} class="portfolio-card-img " alt="imagen" />
+          <span class="portfolio-card-overlay">
+            <span class="portfolio-card-caption">
+              <h4>{titulo}</h4>
+              <p class="font-weight-normal">fecha creacion: {fecha}</p>
+              <button class="btn btn-primary btn-sm" href={url} value="@Pj.IdPersonaje">link</button>
+              <Link to={`/detalleCreacion/${id}`}> <button class="btn btn-primary btn-sm" >DetalleCreacion</button></Link>
+            </span>
+          </span>
+        </a>
+      </div>
+
     </>
   )
 

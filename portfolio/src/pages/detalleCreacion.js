@@ -17,8 +17,8 @@ export default function DetalleCreacion() {
         console.log("la creacion que sale cuando se llama a creacionById", creacion);     
     },[id]);
 
-
-    
+console.log("creacion en detalle cracion");
+console.log(creacion);    
 
     return(
 <>

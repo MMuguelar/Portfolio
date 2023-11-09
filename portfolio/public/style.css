@@ -26,14 +26,14 @@ html {
     columns:auto;
     
   }
-  .lll
+  /*.lll
   {float:left;
   background-image:url("/Imagenes/fondocard.jpg");
   position: relative;
   background-size: cover;
   background-position: 50%;
   
-  }
+  }*/
   .FondoNegro2
   {
     background-color: #272727;
@@ -397,6 +397,10 @@ html {
   
   .tamanoImg{
   width:auto;
-  height:300px;
+  height:500px;
   
+  }
+  .alejar{
+    margin-right: 50px;
+    margin-left: -40px;
   }
