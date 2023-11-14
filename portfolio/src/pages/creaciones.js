@@ -14,6 +14,7 @@ export default function Creaciones() {
 
 
                     <div class="row">
+                        <div class="col-sm">
                         {
                             creaciones.map((creacion) => (
                                 /* {<div class="col-lg-3 col-md-6 col-sm-12 pb-1">}*/
@@ -21,6 +22,7 @@ export default function Creaciones() {
                                 /*  { </div> }*/
                             ))
                         }
+                    </div>
                     </div>
                 </div>
             </section>

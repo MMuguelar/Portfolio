@@ -8,14 +8,14 @@ import InfoCreacion from '../components/infoCreacion';
 export default function DetalleCreacion() {
 
     const { id } = useParams();
-    const { creacion, getCreacionById} = useContext(CreacionesContext);    
+    const { creacion, getCreacionById,creaciones} = useContext(CreacionesContext);    
 
     
     useEffect(() => {
         console.log("el id que me esta llegando", id);
         getCreacionById(id);  
         console.log("la creacion que sale cuando se llama a creacionById", creacion);     
-    },[id]);
+    },[id,creaciones]);
 
 console.log("creacion en detalle cracion");
 console.log(creacion);    

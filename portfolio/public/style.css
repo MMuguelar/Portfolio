@@ -21,10 +21,25 @@ html {
    
     
   }
+  .ImagenDetalles{
+    height:20%;
+    width: auto;
+  
+  }
   .contene2{
     float:left;
     columns:auto;
     
+  }
+  .radio{
+    border-radius: 15px;
+  }
+  .contenedorCardPort{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+   
   }
   /*.lll
   {float:left;
@@ -396,8 +411,10 @@ html {
   }
   
   .tamanoImg{
-  width:auto;
-  height:500px;
+  
+  max-width: auto%;
+  max-height: 175px;
+  
   
   }
   .alejar{

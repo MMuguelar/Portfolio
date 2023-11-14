@@ -11,10 +11,11 @@ const CreacionesProvider = (props) => {
   const [favoritos, setFavoritos] = useState(objeto);
   const [destacados, setDestacados] = useState([]);
 
+
   
-  const getCreaciones = async () => {
-    await axios
-      .get("Creaciones.json")
+  const getCreaciones = () => {
+    axios
+      .get("/Creaciones.json")
       .then((result) => {
        
         setCreaciones(result.data.creaciones);
@@ -25,14 +26,14 @@ const CreacionesProvider = (props) => {
         console.log(error);
       });
   };
-  const getCreacionById = async (id) => {
+  const getCreacionById = (id) => {
   
         let creacionesAux= creaciones;
         let creacionAux =creacionesAux.filter((cre)=>cre.id==id);
         setCreacion(creacionAux[0]);
   };
 
-  const getDestacados = async () => {
+  const getDestacados = () => {
     let creacionesAux = creaciones;
     creacionesAux =  creacionesAux.filter((creacion)=> creacion.destacado == true);
     console.log("creacionesAux", creacionesAux);
