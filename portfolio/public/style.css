@@ -65,6 +65,14 @@ html {
   
   
   }
+  .epicaimagen{
+    max-width: 700px;
+    max-height: 550px;
+    border:#272727;
+    
+    border-radius: 20px;
+
+  }
   .FondoNav
   {
     background:white;

@@ -1,8 +1,8 @@
 import { Link, Outlet } from "react-router-dom";
 import Contacto from "../components/contacto.js";
-import react, { useContext, useEffect } from 'react'
+import { useContext } from "react";
 import { FavoritosContext } from "../context/FavoritosContext.js";
-import Badge from '@mui/material/Badge';
+import Badge from "@mui/material/Badge";
 export default function Layout() {
   const { favoritos } = useContext(FavoritosContext);
   const favoritosAux = favoritos;
@@ -10,8 +10,7 @@ export default function Layout() {
     <>
       <header>
         {" "}
-
-        <a href="" class="text-decoration-none d-block d-lg-none">
+        <a href="!#" class="text-decoration-none d-block d-lg-none">
           <h1 class="m-0 display-5 font-weight-semi-bold">
             <span class="text-primary font-weight-bold border px-3 mr-1">
               E
@@ -25,26 +24,28 @@ export default function Layout() {
           class="collapse navbar-collapse justify-content-between"
           id="navbarCollapse"
         >
-          <div class="navbar-nav mr-auto py-0">
-            {/* <Link to="/" class="nav-item nav-link active">Home</Link>
-            <Link to="/creaciones" class="nav-item nav-link">Creaciones</Link>
-            <Badge badgeContent={favoritosAux.length}   color="primary">
-            <Link to="/favoritos" class="nav-item nav-link">favoritos</Link>
-            </Badge>
-            <Link to="/info" class="nav-item nav-link">info nuestra</Link>*/}
+          <div class="navbar-nav mr-auto py-0">            
             <ul class="nav">
               <li class="item">
-                <Link to="/" class="nav-item nav-link active">Home</Link>
+                <Link to="/" class="nav-item nav-link active">
+                  Home
+                </Link>
               </li>
               <li class="item">
-                <Link to="/creaciones" class="nav-item nav-link">Creaciones</Link>
+                <Link to="/creaciones" class="nav-item nav-link">
+                  Creaciones
+                </Link>
               </li>
               <li class="item">
-                <Link to="/favoritos" class="nav-item nav-link">favoritos <Badge badgeContent={favoritosAux.length} color="primary" /></Link>
-                
+                <Link to="/favoritos" class="nav-item nav-link">
+                  favoritos{" "}
+                  <Badge badgeContent={favoritosAux.length} color="primary" />
+                </Link>
               </li>
               <li class="item">
-                <Link to="/info" class="nav-item nav-link">info nuestra</Link>
+                <Link to="/info" class="nav-item nav-link">
+                  info nuestra
+                </Link>
               </li>
             </ul>
           </div>
@@ -52,11 +53,8 @@ export default function Layout() {
       </nav>
       <Outlet />
       <footer>
-
         <Contacto />
       </footer>
-
-
     </>
   );
 }

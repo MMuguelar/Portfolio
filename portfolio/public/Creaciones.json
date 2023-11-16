@@ -56,9 +56,9 @@
         },
         {
             "id": 6,
-            "titulo": "Random",
-            "descripcion": "foto rara de los pibes en cuero",
-            "imagen": "/img/foto-1.jpeg",
+            "titulo": "Animal",
+            "descripcion": "Foto en donde estabamos de animales",
+            "imagen": "/img/foto-6.jpeg",
             "fecha": "2023-10-22",
             "url": "www.seventhpage.com",
             "destacado":true

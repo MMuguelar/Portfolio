@@ -1,5 +1,4 @@
-import react, {useContext} from 'react';
-import { Link, Outlet } from "react-router-dom";
+import  {useContext} from 'react';
 import { FavoritosContext } from '../context/FavoritosContext';
 import CreacionCard from '../components/creacionCard';
 
