@@ -61,7 +61,7 @@ html {
   }
   .FondoNegroFull
   {
-    background-color: gray;
+    background-color: rgba(6, 99, 76, 0.192);
   
   
   }
@@ -412,8 +412,9 @@ html {
   
   .tamanoImg{
   
-  max-width: auto%;
+  max-width: auto;
   max-height: 175px;
+
   
   
   }

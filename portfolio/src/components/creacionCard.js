@@ -28,9 +28,9 @@ export default function CreacionCard({ creacion }) {
 
 
 
-      <div class="col-md-4 FondoNegro2 contenedorCardPort radio">
+      <div class="col-md-4 FondoNegro2  radio">
         <a href="" class="portfolio-card">
-          <img src={imagen} class="portfolio-card- tamanoImg    " alt="imagen" />
+          <img src={imagen} class=" tamanoImg " alt="imagen" />
           <span class="portfolio-card-overlay">
             <span class="portfolio-card-caption">
               <h4>{titulo}</h4>

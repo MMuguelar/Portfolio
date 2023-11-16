@@ -1,24 +1,13 @@
 import react, { createContext, useContext, useState, useEffect } from "react";
-import { CreacionesContext } from "../context/CreacionesContext";
+import { FavoritosContext } from "../context/FavoritosContext";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 
 export default function InfoCreacion({ creacion }) {
-  {
-    /* const navigate = useNavigate ();
-    console.log ("producto: ",producto);
-    const { id, title, description, price, category, images } = producto || {};
-    const {agregarProducto} = useContext(CarritoContext);
-    const handleOnClick = async ()=>{
-        await agregarProducto(producto);
-        navigate("/carrito");
-    }  */
-  }
-
-  const [incluir, setIncluir] = useState(true);
+ 
   const { id, titulo, descripcion, imagen, fecha, url } = creacion || {};
   console.log(creacion, "la creacion de infoCreacion");
 
-  const { favoritos, AgregarFavoritos, EliminarDeFavoritos } = useContext(CreacionesContext);
+  const { favoritos, AgregarFavoritos, EliminarDeFavoritos, verificarFavorito } = useContext(FavoritosContext);
   const handleOnClick = async () => {
     //que lo mande a la url
   };
@@ -28,18 +17,10 @@ export default function InfoCreacion({ creacion }) {
   const sacarFav = async () => {
     EliminarDeFavoritos(creacion);
   };
-
-  useEffect(() => {
-    setIncluir(true);
-    favoritos.map((favs) => {
-      if (favs == creacion) {
-        console.log("le estas agregando un favorito que ya esta agregado");
-        setIncluir(false);
-      }
-    });
-  }, );
-    console.log("la imagen que llega a info");
-    console.log(imagen);
+  /*useEffect(() => {    
+    
+  }, [favoritos]);*/
+  
   return (
     <>
       {!creacion ? (
@@ -80,7 +61,7 @@ export default function InfoCreacion({ creacion }) {
                 <button class="btn btn-primary px-3" onClick={handleOnClick}>
                   <i class="fa fa-shopping-cart mr-1"></i> Ver url
                 </button>
-                {incluir===false ? (
+                {verificarFavorito(id) ? (
                 <button class="btn btn-danger px-3" onClick={sacarFav}> <i class="fa fa-shopping-cart mr-1"></i>Eliminar De favoritos</button> // cambiarle el color a rojo o algo así
                 ): 
                 <button class="btn btn-primary px-3" onClick={agregarFav}> <i class="fa fa-shopping-cart mr-1"></i>Agregar a favoritos</button>

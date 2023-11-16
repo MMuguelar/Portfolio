@@ -1,12 +1,12 @@
 import react, {useContext} from 'react';
 import { Link, Outlet } from "react-router-dom";
-import { CreacionesContext } from '../context/CreacionesContext';
+import { FavoritosContext } from '../context/FavoritosContext';
 import CreacionCard from '../components/creacionCard';
 
 export default function Favoritos() {
-    const {favoritos} = useContext(CreacionesContext);
+    const {favoritos} = useContext(FavoritosContext);
     console.log("los favoritos en la page Favoritos");
-    console.log(Favoritos);
+    console.log(favoritos);
     return(
 <>
 <section class="section" id="portfolio">

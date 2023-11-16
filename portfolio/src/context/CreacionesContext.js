@@ -4,11 +4,10 @@ import axios from "axios";
 
 export const CreacionesContext = createContext();
 const CreacionesProvider = (props) => {
-  const KEY_FAV="favoritos";
-  let objeto= localStorage.getItem(KEY_FAV) ? JSON.parse(localStorage.getItem(KEY_FAV)) : [];
+
   const [creacion, setCreacion] = useState({});
   const [creaciones, setCreaciones] = useState([]);
-  const [favoritos, setFavoritos] = useState(objeto);
+ 
   const [destacados, setDestacados] = useState([]);
 
 
@@ -41,7 +40,7 @@ const CreacionesProvider = (props) => {
 
   };
   
-  const AgregarFavoritos = async (creacion) => {
+  {/*const AgregarFavoritos = async (creacion) => {
     //hacer que si la creacion ya esta en favoritos que no lo agregue
     let incluir=true;
     favoritos.map((favs)=>{
@@ -55,14 +54,9 @@ const CreacionesProvider = (props) => {
       setFavoritos([...favoritos, creacion]); 
     }
     
-  };
+  };*/}
   
-  const EliminarDeFavoritos = async (creacion) => {
-      let favoritosAux=favoritos;
-      favoritosAux= favoritosAux.filter((favo)=> favo.id !== creacion.id);
-      setFavoritos(favoritosAux);       
-  };
-
+  
 
   
 
@@ -74,27 +68,22 @@ const CreacionesProvider = (props) => {
     
     
 }, []);
-useEffect(()=>{
-  guardarObjeto(favoritos, KEY_FAV); //en teoría esto debería pisar lo que había con la key antes y guardar el nuevo con el producto eliminado
-},[favoritos])
 
-const guardarObjeto = (objeto, key) => {
-  let jsonProductos = JSON.stringify(objeto);
-  localStorage.setItem(key, jsonProductos); 
-}
+
+
   return (
     <>
       <CreacionesContext.Provider
         value={{
           creaciones,
           getCreaciones,
-          favoritos,
+          
           destacados,
           getDestacados,
           creacion,
           getCreacionById,
-          AgregarFavoritos,
-          EliminarDeFavoritos, 
+          
+           
                 
         }}
       >

@@ -12,11 +12,11 @@ export default function Home() {
     console.log("estos son los destacados que me", destacados);
     return (
         <>
-            <section class="section" id="portfolio">
-                <div class="container text-center">
+            <section class="section " id="portfolio" >
+                <div class="container text-center ">
                     <p class="section-subtitle">Bienvenido a nuestros destacados</p>
                     <h6 class="section-title mb-6">Portfolio</h6>
-                    <div class="row">
+                    <div class="row ">
                         {
                             destacados.map((dest) => (
                                

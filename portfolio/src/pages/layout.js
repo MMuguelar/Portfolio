@@ -1,10 +1,10 @@
 import { Link, Outlet } from "react-router-dom";
 import Contacto from "../components/contacto.js";
 import react, { useContext, useEffect } from 'react'
-import { CreacionesContext } from "../context/CreacionesContext.js";
+import { FavoritosContext } from "../context/FavoritosContext.js";
 import Badge from '@mui/material/Badge';
 export default function Layout() {
-  const { favoritos } = useContext(CreacionesContext);
+  const { favoritos } = useContext(FavoritosContext);
   const favoritosAux = favoritos;
   return (
     <>
