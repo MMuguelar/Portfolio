@@ -21,7 +21,7 @@ const CreacionesProvider = (props) => {
   };
   const getCreacionById = (id) => {
     let creacionesAux = creaciones;
-    let creacionAux = creacionesAux.filter((cre) => cre.id === id);
+    let creacionAux = creacionesAux.filter((cre) => cre.id == id);
     setCreacion(creacionAux[0]);
   };
 

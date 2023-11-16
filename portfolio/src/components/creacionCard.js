@@ -7,7 +7,7 @@ export default function CreacionCard({ creacion }) {
   return (
     <>
       <div class="col-md-4 FondoNegro2  radio">
-        <a href="!#" class="portfolio-card">
+        <div href="!#" class="portfolio-card">
           <img src={imagen} class=" tamanoImg " alt="imagen" />
           <span class="portfolio-card-overlay">
             <span class="portfolio-card-caption">
@@ -26,7 +26,7 @@ export default function CreacionCard({ creacion }) {
               </Link>
             </span>
           </span>
-        </a>
+        </div>
       </div>
     </>
   );

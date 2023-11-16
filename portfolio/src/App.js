@@ -11,7 +11,22 @@ import DetalleCreacion from "./pages/detalleCreacion";
 function App() {
   return (
     <>
-      <div>fff</div>
+    <CreacionesProvider>
+    <FavoritosProvider>
+    <BrowserRouter>
+       <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />}></Route>
+            <Route path="/creaciones" element={<Creaciones/>}></Route>
+            <Route path="/favoritos" element={<Favoritos/>}></Route>
+            <Route path="/info" element={<Info/>}></Route>
+            <Route path="/detalleCreacion/:id" element={<DetalleCreacion/>}></Route>
+          </Route>        
+
+       </Routes>
+     </BrowserRouter>
+     </FavoritosProvider>
+     </CreacionesProvider>
     </>
   );
 }

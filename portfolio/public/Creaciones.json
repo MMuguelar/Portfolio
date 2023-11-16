@@ -80,15 +80,6 @@
             "fecha": "2023-10-23",
             "url": "www.ninthpage.com",
             "destacado":false
-        },
-        {
-            "id": 9,
-            "titulo": "titulo10",
-            "descripcion": "",
-            "imagen": "folio-1.jpg",
-            "fecha": "2023-10-23",
-            "url": "www.tenthpage.com",
-            "destacado":false
         }
     ]
 }

@@ -32,11 +32,7 @@ export default function InfoCreacion({ creacion }) {
                 {" "}
                 {/*si se empieza a superponer con el resto de cosas agregarle la clase alejar */}
                 <div class="carousel-item active ">
-                  <img
-                    class="epicaimagen alejar"
-                    /*"carousel-inner border"*/ src={imagen}
-                    alt="imagesdfsdf" /*height="300px"whith="auto"*/
-                  />
+                  <img class="epicaimagen alejar" src={imagen}  alt="imagesdfsdf"  />
                 </div>
               </div>
             </div>
