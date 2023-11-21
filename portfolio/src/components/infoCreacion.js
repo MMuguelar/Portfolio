@@ -21,68 +21,68 @@ export default function InfoCreacion({ creacion }) {
       {!creacion ? (
         <div>loading</div>
       ) : (
-        <div class="row px-xl-5">
-          <div class="col-lg-5 pb-5">
+        <div className="row px-xl-5">
+          <div className="col-lg-5 pb-5">
             <div
               id="product-carousel"
-              class="carousel slide"
+              className="carousel slide"
               data-ride="carousel"
             >
-              <div class="">
+              <div className="">
                 {" "}
                 {/*si se empieza a superponer con el resto de cosas agregarle la clase alejar */}
-                <div class="carousel-item active ">
-                  <img class="epicaimagen alejar" src={imagen}  alt="imagesdfsdf"  />
+                <div className="carousel-item active ">
+                  <img className="epicaimagen alejar" src={imagen}  alt="imagesdfsdf"  />
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-7 pb-5">
-            <h1 class="font-weight-semi-bold">{titulo}</h1>
-            <div class="d-flex mb-3">
-              <div class="text-primary mr-2">
-                <small class="fas fa-star"></small>
-                <small class="fas fa-star"></small>
-                <small class="fas fa-star"></small>
-                <small class="fas fa-star-half-alt"></small>
-                <small class="far fa-star"></small>
+          <div className="col-lg-7 pb-5">
+            <h1 className="font-weight-semi-bold">{titulo}</h1>
+            <div className="d-flex mb-3">
+              <div className="text-primary mr-2">
+                <small className="fas fa-star"></small>
+                <small className="fas fa-star"></small>
+                <small className="fas fa-star"></small>
+                <small className="fas fa-star-half-alt"></small>
+                <small className="far fa-star"></small>
               </div>
-              <small class="pt-1"></small>
+              <small className="pt-1"></small>
             </div>
-            <h3 class="font-weight-semi-bold mb-4">{fecha}</h3>
-            <p class="mb-4">{descripcion}</p>
-            <div class="d-flex mb-3">
-              <div class="d-flex align-items-center mb-4 pt-2">
-                <button class="btn btn-primary px-3" onClick={handleOnClick}>
-                  <i class="fa fa-shopping-cart mr-1"></i> Ver url
+            <h3 className="font-weight-semi-bold mb-4">{fecha}</h3>
+            <p className="mb-4">{descripcion}</p>
+            <div className="d-flex mb-3">
+              <div className="d-flex align-items-center mb-4 pt-2">
+                <button className="btn btn-primary px-3" onClick={handleOnClick}>
+                  <i className="fa fa-shopping-cart mr-1"></i> Ver url
                 </button>
                 {verificarFavorito(id) ? (
-                  <button class="btn btn-danger px-3" onClick={sacarFav}>
+                  <button className="btn btn-danger px-3" onClick={sacarFav}>
                     {" "}
-                    <i class="fa fa-shopping-cart mr-1"></i>Eliminar De
+                    <i className="fa fa-shopping-cart mr-1"></i>Eliminar De
                     favoritos
                   </button> // cambiarle el color a rojo o algo así
                 ) : (
-                  <button class="btn btn-primary px-3" onClick={agregarFav}>
+                  <button className="btn btn-primary px-3" onClick={agregarFav}>
                     {" "}
-                    <i class="fa fa-shopping-cart mr-1"></i>Agregar a favoritos
+                    <i className="fa fa-shopping-cart mr-1"></i>Agregar a favoritos
                   </button>
                 )}
               </div>
-              <div class="d-flex pt-2">
-                <div class="d-inline-flex">
-                  <a class="text-dark px-2" href="!#">
-                    <i class="fab fa-facebook-f"></i>
+              <div className="d-flex pt-2">
+                <div className="d-inline-flex">
+                  <a className="text-dark px-2" href="!#">
+                    <i className="fab fa-facebook-f"></i>
                   </a>
-                  <a class="text-dark px-2" href="!#">
-                    <i class="fab fa-twitter"></i>
+                  <a className="text-dark px-2" href="!#">
+                    <i className="fab fa-twitter"></i>
                   </a>
-                  <a class="text-dark px-2" href="!#">
-                    <i class="fab fa-linkedin-in"></i>
+                  <a className="text-dark px-2" href="!#">
+                    <i className="fab fa-linkedin-in"></i>
                   </a>
-                  <a class="text-dark px-2" href="!#">
-                    <i class="fab fa-pinterest"></i>
+                  <a className="text-dark px-2" href="!#">
+                    <i className="fab fa-pinterest"></i>
                   </a>
                 </div>
               </div>

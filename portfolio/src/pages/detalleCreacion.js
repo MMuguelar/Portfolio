@@ -9,11 +9,11 @@ export default function DetalleCreacion() {
     useContext(CreacionesContext);
 
   useEffect(() => {
-    getCreacionById(id);
+    getCreacionById(parseInt(id));
   }, [id, creaciones, getCreacionById, creacion]);
   return (
     <>
-      <div class="container-fluid py-5">
+      <div className="container-fluid py-5">
         <InfoCreacion creacion={creacion} />
       </div>
     </>

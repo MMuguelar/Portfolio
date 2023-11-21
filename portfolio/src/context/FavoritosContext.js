@@ -19,8 +19,6 @@ const FavoritosProvider = (props) => {
     setFavoritos(favoritosAux);
   };
   const verificarFavorito = (id) => {
-    console.log("favoritos", favoritos);
-    console.log("id", id);
     let filtro = favoritos.filter((x) => x.id === id);
 
     return filtro.length > 0;

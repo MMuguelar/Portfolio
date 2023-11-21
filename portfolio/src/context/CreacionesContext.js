@@ -12,8 +12,7 @@ const CreacionesProvider = (props) => {
     axios
       .get("/Creaciones.json")
       .then((result) => {
-        setCreaciones(result.data.creaciones);
-        console.log("creaciones:", result.data.creaciones);
+        setCreaciones(result.data.creaciones);        
       })
       .catch((error) => {
         console.log(error);
@@ -21,7 +20,7 @@ const CreacionesProvider = (props) => {
   };
   const getCreacionById = (id) => {
     let creacionesAux = creaciones;
-    let creacionAux = creacionesAux.filter((cre) => cre.id == id);
+    let creacionAux = creacionesAux.filter((cre) => cre.id === id);
     setCreacion(creacionAux[0]);
   };
 
@@ -32,9 +31,14 @@ const CreacionesProvider = (props) => {
   };
 
   useEffect(() => {
-    getCreaciones();
-    getDestacados();
+    getCreaciones();    
   }, []);
+
+
+  useEffect(()=>{
+    if(creaciones.length>0)
+      getDestacados();
+  },[creaciones])
 
   return (
     <>

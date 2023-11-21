@@ -6,17 +6,17 @@ export default function Creaciones() {
     const { creaciones } = useContext(CreacionesContext);
     return (
         <>
-            <section class="section" id="portfolio">
-                <div class="container text-center">
-                    <p class="section-subtitle">Todas nuestras obras</p>
-                    <h6 class="section-title mb-6">Creaciones</h6>
+            <section className="section" id="portfolio">
+                <div className="container text-center">
+                    <p className="section-subtitle">Todas nuestras obras</p>
+                    <h6 className="section-title mb-6">Creaciones</h6>
 
 
-                    <div class="row">
+                    <div className="row">
                         {
                             creaciones.map((creacion) => (
-                                /* {<div class="col-lg-3 col-md-6 col-sm-12 pb-1">}*/
-                                <CreacionCard creacion={creacion} />
+                                /* {<div className="col-lg-3 col-md-6 col-sm-12 pb-1">}*/
+                                <CreacionCard key={creacion.id} creacion={creacion} />
                                 /*  { </div> }*/
                             ))
                         }

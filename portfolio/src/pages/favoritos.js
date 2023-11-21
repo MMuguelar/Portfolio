@@ -3,20 +3,18 @@ import { FavoritosContext } from '../context/FavoritosContext';
 import CreacionCard from '../components/creacionCard';
 
 export default function Favoritos() {
-    const {favoritos} = useContext(FavoritosContext);
-    console.log("los favoritos en la page Favoritos");
-    console.log(favoritos);
+    const {favoritos} = useContext(FavoritosContext);    
     return(
 <>
-<section class="section" id="portfolio">
-        <div class="container text-center">
-            <p class="section-subtitle">Tus obras favoritas</p>
-            <h6 class="section-title mb-6">Favoritos</h6>
-            <div class="row">
+<section className="section" id="portfolio">
+        <div className="container text-center">
+            <p className="section-subtitle">Tus obras favoritas</p>
+            <h6 className="section-title mb-6">Favoritos</h6>
+            <div className="row">
     {
                 favoritos.map((fav) => (
                     
-                        <CreacionCard creacion={fav}/>
+                        <CreacionCard key={fav.id} creacion={fav}/>
                    
                 ))
             }
